@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<Title>Flatten the nested-array</Title>
+<script>
+   // var len = 0;
+   var arr= [1,2,[3,4],5,[6,[7,8]],9];
+   //var b= new Array(10);
+   //var c = new Array(10);
+   //for(var i = 0; i<ar.length;i++){
+   //if (typeof(ar[i])=="number")
+   //b.push(ar[i]);
+   //else
+   //c.push(ar[i]);
+   var res = [];
+
+function flatten(arr){
+for(var i=0;i<arr.length;i++){
+if(typeof arr[i] == "number"){
+res.push(arr[i]);
+}
+else
+{
+flatten(arr[i]);
+}
+}
+}
+ 
+
+
+  // document.write(c);
+   //for(var i = 0; i<ar.length;i++){
+     //  for(var j = 0;j <3;j++){
+       //    for(var k = 0;k < 2;k++){
+         //      alert(b.push(a[i][j][k]));
+           //}
+       //}
+   //}
+ //  for(var i=0;i<ar.length;i++){
+  //  len = len + ar[i].length ;
+   //}
+  // alert(len);
+flatten(arr);
+alert(res);
+//alert(arr.toString);
+
+</script>
+</head>
+</html>
+
+
